@@ -57,8 +57,7 @@ interface ExampleFlatNode {
 
 
 export class NavBarComponent implements OnInit {
-  ngOnInit(): void {
-    throw new Error("Method not implemented.");
+  ngOnInit(){
   }
   private _transformer = (node: FoodNode, level: number) => {
     return {

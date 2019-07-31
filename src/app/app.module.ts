@@ -5,11 +5,13 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {CdkTreeModule} from '@angular/cdk/tree';
 import { DemoMaterialModule } from './material.module';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
+import {SideBarComponent} from './side-bar/side-bar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    NavBarComponent
+    NavBarComponent,
+    SideBarComponent
   ],
   imports: [
     BrowserModule,
