@@ -2,3 +2,31 @@
     display: flex;
     align-items: center;
   }
+#mt {
+    background: whitesmoke;
+}
+  .row>div>section{
+    min-height: 101vh;
+    height: 100%;
+    background: whitesmoke;
+}
+
+.collapse>a:hover{
+    text-decoration: none;
+}
+
+.nav-item{
+    min-width: 100%;
+}
+
+#collapsed>a{
+    background: whitesmoke;
+}
+
+#menuHead{
+   padding-bottom: 10px;
+    background: white;
+    -webkit-box-shadow: inset 0px -11px 10px -11px rgba(0,0,0,0.75);
+    -moz-box-shadow: inset 0px -11px 10px -11px rgba(0,0,0,0.75);
+    box-shadow: inset 0px -11px 10px -11px rgba(0,0,0,0.75);
+}

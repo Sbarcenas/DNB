@@ -4,44 +4,34 @@ import {MatTreeFlatDataSource, MatTreeFlattener} from '@angular/material/tree';
 
 interface FoodNode {
   name: string;
+  route?:string;
   children?: FoodNode[];
 }
 
 const TREE_DATA: FoodNode[] = [
   {
-    name: 'Fruit',
-    children: [
-      {name: 'Apple'},
-      {name: 'Banana'},
-      {name: 'Fruit loops'},
-    ]
-  },
-  {
-    name: 'Constant',
-    children: [
-      {name: 'Apple'},
-      {name: 'Banana'},
-      {name: 'Fruit loops'},
-    ]
-  },
-   {
-    name: 'Vegetables',
+    name: 'Orden de carga',
     children: [
       {
-        name: 'Green',
-        children: [
-          {name: 'Broccoli'},
-          {name: 'Brussel sprouts'},
-        ]
-      }, {
-        name: 'Orange',
-        children: [
-          {name: 'Pumpkins'},
-          {name: 'Carrots'},
-        ]
+        name: 'Carbón',
+        route: '/carbon'
       },
+      {
+        name: 'Granito',
+        route: '/granito',
+        children: [
+          {
+            name: 'Carbón',
+            route: '/carbon'
+          },
+          {
+            name: 'Granito',
+            route: '/granito'
+          }
+        ]
+      }
     ]
-  },
+  }
 ];
 
 /** Flat node with expandable and level information */
