@@ -5,19 +5,30 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {CdkTreeModule} from '@angular/cdk/tree';
 import { DemoMaterialModule } from './material.module';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
-import {SideBarComponent} from './side-bar/side-bar.component';
+import { RouterModule, Routes } from '@angular/router';
+import { CarbonComponent } from './carbon/carbon.component';
 
-@NgModule({
+const appRoutes: Routes = [
+  
+  { path: 'carbon', component: CarbonComponent }
+  
+  ]
+
+  @NgModule({
   declarations: [
     AppComponent,
     NavBarComponent,
-    SideBarComponent
+    CarbonComponent,
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     CdkTreeModule,
-    DemoMaterialModule
+    DemoMaterialModule,
+    RouterModule.forRoot(
+      appRoutes,
+      { enableTracing: true } // <-- debugging purposes only
+    )
   ],
   providers: [],
   bootstrap: [AppComponent]

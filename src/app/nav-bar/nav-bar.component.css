@@ -30,3 +30,12 @@
     -moz-box-shadow: inset 0px -11px 10px -11px rgba(0,0,0,0.75);
     box-shadow: inset 0px -11px 10px -11px rgba(0,0,0,0.75);
 }
+
+.hlimage{
+    max-width: 100%;
+}
+
+#pa{
+   margin:0;
+   padding-right: 20px;
+}

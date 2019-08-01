@@ -16,20 +16,6 @@ const TREE_DATA: FoodNode[] = [
         name: 'Carbón',
         route: '/carbon'
       },
-      {
-        name: 'Granito',
-        route: '/granito',
-        children: [
-          {
-            name: 'Carbón',
-            route: '/carbon'
-          },
-          {
-            name: 'Granito',
-            route: '/granito'
-          }
-        ]
-      }
     ]
   }
 ];
@@ -42,6 +28,7 @@ interface ExampleFlatNode {
   name: string;
   level: number;
   isExpanded?: boolean;
+  route?: string;
 }
 
 /**
@@ -64,6 +51,7 @@ export class NavBarComponent implements OnInit {
       expandable: !!node.children && node.children.length > 0,
       name: node.name,
       level: level,
+      route: node.route
     };
   }
 
